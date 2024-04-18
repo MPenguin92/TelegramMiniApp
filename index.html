@@ -6,8 +6,12 @@
     <title>Unity WebGL Player | TelegramMiniApp</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width=600 height=960 tabindex="-1" style="width: 600px; height: 960px; background: #231F20"></canvas>
+    <script src="https://telegram.org/js/games.js"></script>
+    <button onclick="TelegramGameProxy.shareScore()">Share score</button>
+
     <script src="Build/TelegramMiniApp.loader.js"></script>
+    <canvas id="unity-canvas" width=600 height=960 tabindex="-1" style="width: 600px; height: 960px; background: #231F20">
+    </canvas>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
