@@ -7,7 +7,7 @@
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <script src="https://telegram.org/js/games.js"></script>
-    <button onclick="TelegramGameProxy.shareScore()">Share score</button>
+    <!--<button onclick="getUserId()">Share score</button>-->
 
     <script src="Build/TelegramMiniApp.loader.js"></script>
     <canvas id="unity-canvas" width=600 height=960 tabindex="-1" style="width: 600px; height: 960px; background: #231F20">
@@ -39,6 +39,18 @@
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
+      
+    /*function getUserId()
+    {
+      const hash = window.location.href.split('#')[1];
+      const params = new URLSearchParams(hash);
+      const userId = params.get('userId');
+      // 打印userId参数
+      console.log('User ID:', userId);
+    }*/
+
+
     </script>
+    
   </body>
 </html>
