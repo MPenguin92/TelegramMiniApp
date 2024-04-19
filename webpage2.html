@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpage 2</title>
+</head>
+<body>
+    <button onclick="goToWebpage3()">Return</button>
+
+    <script>
+        function goToWebpage3() {
+            // 从SessionStorage获取之前存储的URL
+            var originURL = sessionStorage.getItem('originURL');
+            // 存储当前网页2的URL到SessionStorage，用于后续使用
+            sessionStorage.setItem('code', 'IUQW#ASSLKD!');
+            // 跳转到网页3，同时传递一个标识符，以便网页3知道需要从SessionStorage读取数据
+            window.location.href = 'index.html?fromSession=true';
+        }
+    </script>
+</body>
+</html>

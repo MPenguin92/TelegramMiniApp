@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpage 3</title>
+</head>
+<body>
+    <h1>This is Webpage 3</h1>
+    <p id="urlDisplay">URL will be displayed here.</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 检查URL中是否包含特定的查询参数
+            if (window.location.search === '?fromSession=true') {
+                // 从SessionStorage获取之前存储的URL
+                var originURL = sessionStorage.getItem('originURL');
+                var currentURL = sessionStorage.getItem('currentURL');
+                // 显示URL
+                document.getElementById('urlDisplay').textContent = 'URL from Webpage 1: ' + originURL + ' | URL from Webpage 2: ' + currentURL;
+            }
+        });
+    </script>
+</body>
+</html>
