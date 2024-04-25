@@ -110,7 +110,7 @@
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
                 MyGameInstance = unityInstance;
-                MyGameInstance.SendMessage('Bridge', 'MyFunction');
+                //MyGameInstance.SendMessage('Bridge', 'MyFunction');
                 fullscreenButton.onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
