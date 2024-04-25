@@ -104,6 +104,9 @@
       script.src = loaderUrl;
       script.onload = () => {
         var MyGameInstance = null;
+        var code = GetXterioCode();
+        MyGameInstance.SendMessage('Bridge', 'SetCode', code);
+
         createUnityInstance(canvas, config, (progress) => {
          
           progressBarFull.style.width = 100 * progress + "%";
