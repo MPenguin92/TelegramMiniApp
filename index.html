@@ -121,6 +121,10 @@
 
       document.body.appendChild(script);
 
+      function SendToken2Unity(token) {
+        MyGameInstance.SendMessage('Bridge', 'SetToken', token);
+      }
+
     </script>
   </body>
 </html>
