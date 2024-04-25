@@ -123,7 +123,14 @@
 
       function SendToken2Unity(token) {
         MyGameInstance.SendMessage('Bridge', 'MyFunction');
-        MyGameInstance.SendMessage('Bridge', 'SetToken', token);
+        console.log(token);
+
+        var result = token;
+        var bufferSize = lengthBytesUTF8(result) + 1;
+        var buffer = _malloc(bufferSize);
+        stringToUTF8(result, buffer, bufferSize);
+        console.log(result);
+        MyGameInstance.SendMessage('Bridge', 'SetToken', result);
       }
 
     </script>
