@@ -110,7 +110,7 @@
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
                 MyGameInstance = unityInstance;
-                //MyGameInstance.SendMessage('Bridge', 'MyFunction');
+                MyGameInstance.SendMessage('Bridge', 'MyFunction');
                 fullscreenButton.onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
@@ -122,6 +122,7 @@
       document.body.appendChild(script);
 
       function SendToken2Unity(token) {
+        MyGameInstance.SendMessage('Bridge', 'MyFunction');
         MyGameInstance.SendMessage('Bridge', 'SetToken', token);
       }
 
