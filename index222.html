@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调起支付宝App示例</title>
+</head>
+<body>
+    <button onclick="openAlipayApp()">打开支付宝</button>
+
+    <script>
+        function openAlipayApp() {
+            // 使用支付宝的URL Scheme调起支付宝App
+            window.location.href = 'alipay://';
+        }
+    </script>
+</body>
+</html>
